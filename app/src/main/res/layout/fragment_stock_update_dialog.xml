@@ -1,0 +1,77 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    tools:context=".Features.UpdateStockInfo.StockUpdateDialogFragment">
+
+    <EditText
+        android:id="@+id/stockNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Product_Name"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/barcodeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockNameEditText"
+        android:hint="Barcode_No"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/quantityEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barcodeEditText"
+        android:hint="Quantity"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/purchase_priceEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Purchase_Price"
+        android:inputType="textShortMessage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantityEditText" />
+
+    <EditText
+        android:id="@+id/sell_priceEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Sell_Price"
+        android:inputType="textShortMessage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchase_priceEditText" />
+
+    <Button
+        android:id="@+id/updateStockInfoButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sell_priceEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cancelButton"
+        android:text="@string/update"/>
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sell_priceEditText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/updateStockInfoButton"
+        android:text="@string/cancel_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
